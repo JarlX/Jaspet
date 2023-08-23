@@ -1,0 +1,15 @@
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/bin/Debug/net7.0/JaspetWEBUI.Helper.deps.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/bin/Debug/net7.0/JaspetWEBUI.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/bin/Debug/net7.0/JaspetWEBUI.Helper.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/bin/Debug/net7.0/JaspetWEBUI.Core.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/bin/Debug/net7.0/JaspetWEBUI.Core.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.csproj.AssemblyReference.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.AssemblyInfoInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.AssemblyInfo.cs
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.csproj.CoreCompileInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.csproj.CopyComplete
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/refint/JaspetWEBUI.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/JaspetWEBUI.Helper.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/Debug/net7.0/ref/JaspetWEBUI.Helper.dll

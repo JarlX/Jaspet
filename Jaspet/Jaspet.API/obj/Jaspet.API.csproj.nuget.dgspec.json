@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.API/Jaspet.API.csproj": {}
+  },
+  "projects": {
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.API/Jaspet.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.API/Jaspet.API.csproj",
+        "projectName": "Jaspet.API",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.API/Jaspet.API.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/Jaspet.Business.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/Jaspet.Business.csproj"
+              },
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/Jaspet.Helper.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/Jaspet.Helper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/Jaspet.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/Jaspet.Business.csproj",
+        "projectName": "Jaspet.Business",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/Jaspet.Business.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/Jaspet.DAL.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/Jaspet.DAL.csproj"
+              },
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/Jaspet.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/Jaspet.DAL.csproj",
+        "projectName": "Jaspet.DAL",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/Jaspet.DAL.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj",
+        "projectName": "Jaspet.Entity",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/Jaspet.Entity.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/Jaspet.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/Jaspet.Helper.csproj",
+        "projectName": "Jaspet.Helper",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/Jaspet.Helper.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

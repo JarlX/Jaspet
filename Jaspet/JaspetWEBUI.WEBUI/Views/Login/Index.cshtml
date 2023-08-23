@@ -1,0 +1,58 @@
+@model JaspetWEBUI.Core.DTO.LoginDTO
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="block" style="margin-top: 100px">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 d-flex">
+                <div class="card flex-grow-1 mb-md-0">
+                  <div class="card-body">
+                    <h3 class="card-title">Giriş Yap</h3>
+                    <form asp-action="Login" asp-controller="Login" method="post" data-dashlane-rid="964a33cd52e67469" data-form-type="login">
+                      <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" class="form-control" asp-for="UserName" placeholder="Kullanıcı Adı" data-dashlane-rid="00a0ef4d170ad5b5" data-form-type="text" data-kwimpalastatus="alive" data-kwimpalaid="1692742565782-0">
+                      </div>
+                      <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" class="form-control" asp-for="Password" placeholder="Password" data-dashlane-rid="77758616619c0e5b" data-form-type="password" data-kwimpalastatus="alive" data-kwimpalaid="1692742565782-1">
+                      </div>
+                      <div class="form-group">
+                      </div>
+                      <button type="submit" class="btn btn-primary mt-4" data-dashlane-label="true" data-dashlane-rid="b69767e95781bf4b" data-form-type="action,login" data-kwimpalastatus="dead">
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex mt-4 mt-md-0">
+                <div class="card flex-grow-1 mb-0">
+                  <div class="card-body">
+                    <h3 class="card-title">Register</h3>
+                    <form data-dashlane-rid="e8c8d80913534e61" data-form-type="register">
+                      <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter email" data-dashlane-rid="f78406ff17b2e449" data-form-type="email" data-kwimpalastatus="alive" data-kwimpalaid="1692742565782-3">
+                      </div>
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password" data-dashlane-rid="be9bc4be356e822b" data-form-type="password,new" data-kwimpalastatus="alive" data-kwimpalaid="1692742565782-4">
+                      </div>
+                      <div class="form-group">
+                        <label>Repeat Password</label>
+                        <input type="password" class="form-control" placeholder="Password" data-dashlane-rid="3f590ae45f9168c0" data-form-type="password,confirmation" data-kwimpalastatus="alive" data-kwimpalaid="1692742565782-5">
+                      </div>
+                      <button type="submit" class="btn btn-primary mt-4" data-dashlane-label="true" data-dashlane-rid="4197b8bbe83a7412" data-form-type="action,register">
+                        Register
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

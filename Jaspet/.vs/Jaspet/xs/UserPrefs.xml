@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{23A2E1DC-0EC4-47FD-904A-A6ADF910A058}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Jaspet.API/Middleware/ApiAuthorizationMiddleware.cs">
+    <Files>
+      <File FileName="Jaspet.API/Middleware/ApiAuthorizationMiddleware.cs" Line="30" Column="69" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Jaspet" expanded="True">
+            <Node name="JaspetAPI" expanded="True">
+              <Node name="Jaspet.API">
+                <Node name="Middleware">
+                  <Node name="ApiAuthorizationMiddleware.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.JaspetAPI.Jaspet.API PreferredExecutionTarget="/Applications/Arc.app" />
+</Properties>

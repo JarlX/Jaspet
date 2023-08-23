@@ -1,0 +1,17 @@
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.DAL.deps.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.DAL.runtimeconfig.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.DAL.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.DAL.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.Entity.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/bin/Debug/net7.0/Jaspet.Entity.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.csproj.AssemblyReference.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.AssemblyInfoInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.AssemblyInfo.cs
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.csproj.CoreCompileInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.csproj.CopyComplete
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/refint/Jaspet.DAL.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/Jaspet.DAL.genruntimeconfig.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.DAL/obj/Debug/net7.0/ref/Jaspet.DAL.dll

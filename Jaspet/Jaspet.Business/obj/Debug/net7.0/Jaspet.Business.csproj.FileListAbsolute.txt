@@ -1,0 +1,17 @@
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.Business.deps.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.Business.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.Business.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.DAL.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.Entity.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.DAL.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/bin/Debug/net7.0/Jaspet.Entity.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.csproj.AssemblyReference.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.AssemblyInfoInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.AssemblyInfo.cs
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.csproj.CoreCompileInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.csproj.CopyComplete
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/refint/Jaspet.Business.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/Jaspet.Business.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Business/obj/Debug/net7.0/ref/Jaspet.Business.dll

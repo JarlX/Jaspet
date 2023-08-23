@@ -1,0 +1,12 @@
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/bin/Debug/net7.0/Jaspet.Entity.deps.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/bin/Debug/net7.0/Jaspet.Entity.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/bin/Debug/net7.0/Jaspet.Entity.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.csproj.AssemblyReference.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.AssemblyInfoInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.AssemblyInfo.cs
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.csproj.CoreCompileInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/refint/Jaspet.Entity.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/Jaspet.Entity.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Entity/obj/Debug/net7.0/ref/Jaspet.Entity.dll

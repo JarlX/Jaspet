@@ -1,0 +1,213 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/JaspetWEBUI.WEBUI.csproj": {}
+  },
+  "projects": {
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/JaspetWEBUI.WEBUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/JaspetWEBUI.WEBUI.csproj",
+        "projectName": "JaspetWEBUI.WEBUI",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/JaspetWEBUI.WEBUI.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj"
+              },
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/JaspetWEBUI.Helper.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/JaspetWEBUI.Helper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj",
+        "projectName": "JaspetWEBUI.Core",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/JaspetWEBUI.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/JaspetWEBUI.Helper.csproj",
+        "projectName": "JaspetWEBUI.Helper",
+        "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/JaspetWEBUI.Helper.csproj",
+        "packagesPath": "/Users/salihcancakar/.nuget/packages/",
+        "outputPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Helper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/salihcancakar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj": {
+                "projectPath": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI/JaspetWEBUI.Core/JaspetWEBUI.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

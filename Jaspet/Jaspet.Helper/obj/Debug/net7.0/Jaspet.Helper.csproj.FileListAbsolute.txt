@@ -1,0 +1,12 @@
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/bin/Debug/net7.0/Jaspet.Helper.deps.json
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/bin/Debug/net7.0/Jaspet.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/bin/Debug/net7.0/Jaspet.Helper.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.csproj.AssemblyReference.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.AssemblyInfoInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.AssemblyInfo.cs
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.csproj.CoreCompileInputs.cache
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/refint/Jaspet.Helper.dll
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/Jaspet.Helper.pdb
+/Users/salihcancakar/Desktop/Jaspet/Jaspet/Jaspet.Helper/obj/Debug/net7.0/ref/Jaspet.Helper.dll

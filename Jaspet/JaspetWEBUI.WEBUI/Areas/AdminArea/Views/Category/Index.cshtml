@@ -1,0 +1,121 @@
+@model List<JaspetWEBUI.Core.DTO.CategoryDTO>
+
+
+@{
+    ViewData["Title"] = "Kategoriler";
+    Layout = "_Layout";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Kategoriler</h3>
+        <div class="card-tools">
+            <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modal-newCategory">Ekle</button>
+
+        </div>
+    </div>
+    <div class="card-body">
+
+        <table id="tblKategoriler" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th style="width: 10px"></th>
+                <th>Kategori</th>
+                <th style="width:20%"></th>
+            </tr>
+            </thead>
+            <tbody>
+            @{
+                var i = 0;
+                foreach (var item in Model)
+                {
+                    i++;
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.CategoryName</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info" id="btnUpdateCategory"  data-toggle="modal">Güncelle</button>
+                                <button type="button" class="btn btn-danger" id="btnDeleteCategory">Sil</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@* MODAL *@
+<div class="modal fade" id="modal-newCategory">
+    <div class="modal-dialog modal-newCategory">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Yeni Kategori</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="add_inputCategoryName">Kategori Adı</label>
+                    <input type="text" class="form-control" id="add_inputCategoryName">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="btnAddCategory">Kaydet</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@* MODAL *@
+
+<script>
+$(()=>{
+    $("#tblKategoriler").DataTable({
+    "language":"tr",
+    "responsive":true,
+    "lengthChange":false,
+    "autoWidth":false,
+    "buttons":["copy","csv","excel","pdf","print","colvis"]
+    }).buttons().container().appendTo("#tblKategoriler_wrapper .col-md-6:eq(0)");
+    
+    $("#btnAddCategory").click(()=>{
+        let categoryDto = {};
+        
+        categoryDto.CategoryName = $("#add_inputCategoryName").val();
+        
+        $.ajax({
+            url:"/Admin/AddCategory",
+            method:"POST",
+            data:{ categoryDto },
+            success:(res)=>{
+               if (res.success){
+                    Swal.fire({
+                    language: {
+                            url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/tr.json',
+                        },
+                    position:"top-end",
+                    icon:"success",
+                    title:"Kategori Başarıyla Eklendi",
+                    showConfirmButton:false,
+                    timer:3000
+                    });
+                    
+                    setTimeout(()=>{window.location.reload()},3000);
+               }
+            },
+            error:(err)=>{
+                console.log(err)
+            }
+        })
+    });
+    
+    
+    $("#b")
+})
+</script>
