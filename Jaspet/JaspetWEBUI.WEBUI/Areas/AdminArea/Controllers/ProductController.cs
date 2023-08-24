@@ -164,7 +164,7 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
         [HttpPost("/Admin/RemoveProduct/{productGUID}")]
         public async Task<IActionResult> RemoveProduct(Guid productGUID)
         {
-            var url = $"{BaseUrl}/RemoveProduct" + productGUID;
+            var url = $"{BaseUrl}/RemoveProduct/" + productGUID;
             var client = new RestClient(url);
             var request = new RestRequest(url, Method.Delete);
             request.AddHeader("Content-Type", JsonContentType);

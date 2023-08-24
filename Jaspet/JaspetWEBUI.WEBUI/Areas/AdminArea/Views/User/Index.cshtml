@@ -249,7 +249,7 @@
         let userGUID = $(this).attr("data-guid");
         
         Swal.fire({
-            text:"Kullanıcıyı Silmek İstediğinize Emin Misini?",
+            text:"Kullanıcıyı Silmek İstediğinize Emin Misiniz?",
             icon:"warning",
             showCancelButton: true,
             confirmButtonColor: '#40ff00',
@@ -269,13 +269,13 @@
                             title: 'Kullanıcı Başarıyla Silindi',
                             showConfirmButton: false,
                             timer: 3000
-                        })
+                        })  
                         setTimeout(function () { window.location.reload() }, 3000);
-                        }
+                        }  
                     }
                 })
             }
-        } )
+        })
     })
   });
 </script>

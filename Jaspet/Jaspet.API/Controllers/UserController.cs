@@ -41,11 +41,10 @@ public class UserController : Controller
 
         var hashedPwd = HashPassword(userDtoRequest.Password);
         user.Password = hashedPwd;
-        user.Guid = new Guid();
         await _userService.AddAsync(user);
 
 
-        var userDtoResponse = _mapper.Map<UserDTOResponse>(user);
+        UserDTOResponse userDtoResponse = _mapper.Map<UserDTOResponse>(user);
         return Ok(Final<UserDTOResponse>.OkWithData(userDtoResponse));
     }
 

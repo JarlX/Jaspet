@@ -246,6 +246,87 @@ $(function (){
             }
         }
         })
-    })
+    });
+    
+    $("#btnUpdateProduct").click(function () {
+      let product = {
+        Name: $("#txtProductName_Add").val(),
+        CategoryGuid: $("#ddlProductCategory_Add").val(),
+        Description: $("#txtProductDescription_Add").val(),
+        UnitPrice: $("#txtProductUnitPrice_Add").val(),
+        Guid: $(this).attr("data-guid"),
+      };
+    
+      let files = $("#fuProductFeaturedImage_Add").prop("files");
+    
+      let formData = new FormData();
+      formData.append("Name", product.Name);
+      formData.append("CategoryGuid", product.CategoryGuid);
+      formData.append("Description", product.Description);
+      formData.append("UnitPrice", product.UnitPrice);
+      formData.append("Guid", product.Guid);
+      formData.append("productImage", files[0]);
+    
+      $.ajax({
+        url: "/Admin/UpdateProduct",
+        type: "POST",
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          if (response.success) {
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Ürün Başarıyla Güncellendi",
+              showConfirmButton: false,
+              timer: 3000,
+            });
+            setTimeout(function () {
+              window.location.reload();
+            }, 3000);
+          }
+        },
+      });
+    });
+    
+    $(".btnRemoveProduct").click(function () {
+      var productGUID = $(this).attr("data-guid");
+    
+      Swal.fire({
+        text: "Ürünü Silmek İstediğinizden Emin misiniz?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#2fff00",
+        cancelButtonColor: "#ff0000",
+        confirmButtonText: "Evet!",
+        cancelButtonText: "Hayır",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          $.ajax({
+            url: "/Admin/RemoveProduct/" + productGUID,
+            type: "POST",
+            success: function (res) {
+              if (res.success) {
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "Ürün Başarıyla Silindi",
+                  showConfirmButton: false,
+                  timer: 3000,
+                });
+                setTimeout(function () {
+                  window.location.reload();
+                }, 3000);
+              }
+            },
+          });
+        }
+      });
+    });
+
+
+
 })
 </script>

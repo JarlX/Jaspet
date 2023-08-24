@@ -2,7 +2,7 @@ namespace Jaspet.Entity.DTO.Product;
 
 public class ProductDTORequest
 {
-    public Guid Guid { get; set; } = Guid.NewGuid();
+    public Guid Guid { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public string Image { get; set; }

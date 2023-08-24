@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "723IIgepHX+PQUCcgULvUOq2G/odt5F2PgBiy49dzbc=",
+  "Hash": "jniEIg55+9T7jYguJfZ9xSOeY3uSa2wpIqm7Sc7lqAs=",
   "Source": "JaspetWEBUI.WEBUI",
   "BasePath": "_content/JaspetWEBUI.WEBUI",
   "Mode": "Default",
@@ -40800,6 +40800,23 @@
       "OriginalItemSpec": "wwwroot/ProductsMedia/jaspet_08e2f53a-3e53-4e92-a2b5-5dd556f66673.png"
     },
     {
+      "Identity": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png",
+      "SourceId": "JaspetWEBUI.WEBUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/",
+      "BasePath": "_content/JaspetWEBUI.WEBUI",
+      "RelativePath": "ProductsMedia/jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/ProductsMedia/jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png"
+    },
+    {
       "Identity": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_4fe8bce7-5cdc-45d1-946f-7713d3c169d4.png",
       "SourceId": "JaspetWEBUI.WEBUI",
       "SourceType": "Discovered",
@@ -40900,6 +40917,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/ProductsMedia/jaspet_b4b1d3ee-f2af-4eee-ac3c-2ea7c8f8d62d.png"
+    },
+    {
+      "Identity": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png",
+      "SourceId": "JaspetWEBUI.WEBUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/",
+      "BasePath": "_content/JaspetWEBUI.WEBUI",
+      "RelativePath": "ProductsMedia/jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/ProductsMedia/jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png"
     },
     {
       "Identity": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_bc60c6de-a239-4d66-9a0c-019044fc1cc0.png",

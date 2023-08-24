@@ -5,6 +5,53 @@
     Layout = "_Layout";
 }
 
-Sayın @Model.FullName Sisteme Hoşgeldiniz!.
+<div class="row">
+          <div class="col-md-12">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle" src="/AdminUI/dist/img/user2-160x160.jpg" alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center">@Model.FullName</h3>
+                
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- About Me Box -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Hakkımda</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <strong><i class="fas fa-book mr-1"></i>Eğitim</strong>
+
+                <p class="text-muted">
+                 Orta Doğu Teknik Üniversitesi
+                </p>
+
+                <hr>
+
+                <strong><i class="fas fa-map-marker-alt mr-1"></i>Lokasyon</strong>
+
+                <p class="text-muted">@Model.Address</p>
+
+                <hr>
+
+                <strong><i class="far fa-file-alt mr-1"></i>E-Posta</strong>
+
+                <p class="text-muted">@Model.Email.</p>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+  
+        </div>
 
 

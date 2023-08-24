@@ -38384,6 +38384,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_08e2f53a-3e53-4e92-a2b5-5dd556f66673.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JaspetWEBUI.WEBUI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JaspetWEBUI.WEBUI</BasePath>
+      <RelativePath>ProductsMedia/jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_3e2c3921-b6e6-4fde-918e-b53a3ff89819.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_4fe8bce7-5cdc-45d1-946f-7713d3c169d4.png))">
       <SourceType>Package</SourceType>
       <SourceId>JaspetWEBUI.WEBUI</SourceId>
@@ -38479,6 +38495,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_b4b1d3ee-f2af-4eee-ac3c-2ea7c8f8d62d.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JaspetWEBUI.WEBUI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JaspetWEBUI.WEBUI</BasePath>
+      <RelativePath>ProductsMedia/jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_bace26dc-07ef-4156-9404-da028cb8fd2c.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProductsMedia\jaspet_bc60c6de-a239-4d66-9a0c-019044fc1cc0.png))">
       <SourceType>Package</SourceType>

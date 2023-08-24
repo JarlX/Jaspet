@@ -39,7 +39,7 @@ public class EfUnitOfWork : IUnitOfWork
                 item.Entity.UpdatedTime = DateTime.UtcNow;
                 item.Entity.CreatedUserId = 1;
                 item.Entity.UpdatedTime = DateTime.UtcNow;
-                item.Entity.Guid = new Guid();
+                item.Entity.Guid = Guid.NewGuid();
                 item.Entity.CreatedIPV4Address = _httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
                 item.Entity.UpdatedIPV4Address = _httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
             }

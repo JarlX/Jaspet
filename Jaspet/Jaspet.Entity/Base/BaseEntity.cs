@@ -4,7 +4,7 @@ public class BaseEntity
 {
     public int Id { get; set; }
 
-    public Guid Guid { get; set; } = Guid.NewGuid();
+    public Guid Guid { get; set; }
 
     public bool? IsActive { get; set; } = true;
 
