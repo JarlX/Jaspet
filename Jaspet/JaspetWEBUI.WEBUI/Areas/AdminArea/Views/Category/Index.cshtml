@@ -145,8 +145,8 @@ $(()=>{
     
     $(".btnCategoryDetail").click(function (){
         
-        $("#update_inputCategoryName").val(" ");
-        let categoryGUID = $(this).attr('data-guid');
+        $("#update_inputCategoryName").val("");
+        let categoryGUID = $(this).attr("data-guid");
         
         $.ajax({
         url:"/Admin/Category/" + categoryGUID,
@@ -216,7 +216,7 @@ $(()=>{
                             timer:3000
                             });
                             
-                            setTimeout(()=>{window.location.reload()},3000)
+                            setTimeout(()=>{window.location.reload()},3000);
                         }
                     }
                 })

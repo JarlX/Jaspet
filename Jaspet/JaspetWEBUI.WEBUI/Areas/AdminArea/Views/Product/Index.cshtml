@@ -1,0 +1,173 @@
+@model JaspetWEBUI.Core.ViewModel.ProductViewModel
+
+@{
+    ViewBag.Title = "Ürünler";
+    Layout = "_Layout";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Ürünler</h3>
+        <div class="card-tools">
+            <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modal-NewProduct">Ürün Ekle</button>
+
+        </div>
+    </div>
+    <div class="card-body">
+
+        <table id="tblProducts" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Ürün Resmi</th>
+                    <th>Ürün Adı</th>
+                    <th>Kategorisi</th>
+                    <th>Açıklama</th>
+                    <th>Birim Fiyatı</th>
+                    <th style="width:20%"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @{
+                var index = 0;
+                foreach (var product in Model.Products)
+                {
+                    var productImagePath = "/ProductsMedia/" + product.Image;
+                    index++;
+                    <tr>
+                        <td>@index</td>
+                        <td>
+                            <a href="@productImagePath" data-toggle="lightbox" data-title="@product.Name">
+                                <img src="@productImagePath" class="img-fluid mb-2" alt="@product.Name" width="100" />
+                            </a>
+                        </td>
+                        <td>@product.Name</td>
+                        <td>@product.CategoryName</td> @* BOŞ DÖNÜYOR SONRA BİR BAK!!*@
+                        <td>@product.Description</td>
+                        <td>@product.UnitPrice</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info btnProductDetail" data-guid=@product.Guid data-toggle="modal" data-target="#modal-ProductDetail">Güncelle</button>
+                                <button type="button" class="btn btn-danger btnRemoveProduct" data-guid=@product.Guid>Sil</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@* New Product MODAL *@
+<div class="modal fade" id="modal-NewProduct">
+    <div class="modal-dialog modal-NewProduct">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Yeni Ürün</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="txtProductName_Add">Ürün Adı</label>
+                    <input type="text" class="form-control" id="txtProductName_Add">
+                </div>
+                <div class="form-group">
+                    <label for="txtProductName_Add">Birim Fiyatı</label>
+                    <input type="text" class="form-control" id="txtProductUnitPrice_Add">
+                </div>
+                
+                <div class="form-group">
+                    <label for="txtProductDescription_Add">Ürün Açıklaması</label>
+                    <textarea class="form-control" rows="5" id="txtProductDescription_Add"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ddlProductCategory_Add">Kategorisi</label>
+                    <select class="custom-select rounded-0" id="ddlProductCategory_Add">
+
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Guid">@category.CategoryName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fuProductFeaturedImage_Add">Öne Çıkan Görsel</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fuProductFeaturedImage_Add">
+                            <label class="custom-file-label" for="fuProductFeaturedImage_Add">Choose file</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="btnAddProduct">Kaydet</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@* New Product MODAL *@
+
+
+<script>
+
+$(function (){
+    $("#tblProducts").DataTable({
+    "responsive": true,
+    "lengthChange": false,
+    "autoWidth": false,
+    "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo("#tblProducts_wrapper .col-md-6:eq(0)");
+    
+    $("#btnAddProduct").click(function (){
+        
+        let product = {
+        Name: $('#txtProductName_Add').val(),
+        CategoryGuid: $('#ddlProductCategory_Add').val(),
+        Description:$('#txtProductDescription_Add').val(),
+        UnitPrice:$('#txtProductUnitPrice_Add').val()
+        };
+        
+        let files = $('#fuProductFeaturedImage_Add').prop('files');
+        
+        let formData = new FormData();
+        formData.append("Name", product.Name);
+        formData.append("CategoryGuid", product.CategoryGuid);
+        formData.append("Description", product.Description);
+        formData.append("UnitPrice", product.UnitPrice);
+        formData.append("productImage", files[0]);           
+        
+        $.ajax({
+        url:"/Admin/AddProduct",
+        method:"POST",
+        data:formData,
+        cache:false,
+        contentType:false,
+        processData:false,
+        success:(res)=>{
+            if (res.success){
+                Swal.fire({
+                position:"top-end",
+                icon:"success",
+                title:"Ürün Başarıyla Eklendi",
+                showConfirmButton:false,
+                timer:3000
+                })
+                
+                setTimeout(()=>{window.location.reload()},3000)
+            }
+        }
+        })
+    })
+})
+</script>

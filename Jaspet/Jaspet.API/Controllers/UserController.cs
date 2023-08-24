@@ -41,6 +41,7 @@ public class UserController : Controller
 
         var hashedPwd = HashPassword(userDtoRequest.Password);
         user.Password = hashedPwd;
+        user.Guid = new Guid();
         await _userService.AddAsync(user);
 
 

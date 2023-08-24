@@ -20,6 +20,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<JaspetContext>();
 builder.Services.AddScoped<IUnitOfWork, EfUnitOfWork>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<IUserService, UserManager>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

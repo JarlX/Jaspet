@@ -70,7 +70,7 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
             return Json(new { success = true, data = responseObject.Data });
         }
         
-        [HttpPut("/Admin/UpdateCategory")]
+        [HttpPost("/Admin/UpdateCategory")]
         public async Task<IActionResult> UpdateCategory(CategoryDTO categoryDto)
         {
             var url = $"{BaseUrl}/UpdateCategory";

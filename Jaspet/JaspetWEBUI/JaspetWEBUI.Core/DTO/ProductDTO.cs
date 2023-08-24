@@ -14,7 +14,7 @@ namespace JaspetWEBUI.Core.DTO
         
         public string Description { get; set; }
         
-        public string FeaturedImage { get; set; }
+        public string Image { get; set; }
         
         public string CategoryName { get; set; }
         

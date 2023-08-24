@@ -10,6 +10,7 @@ namespace JaspetWEBUI.Core.DTO
     {
         public string CategoryName { get; set; }
         public Guid? Guid { get; set; }
+        
         public bool? IsActive { get; set; }
     }
 }
