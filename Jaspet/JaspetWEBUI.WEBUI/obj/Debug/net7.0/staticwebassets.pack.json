@@ -9353,6 +9353,10 @@
       "PackagePath": "staticwebassets/Home/vendor/svg4everybody-2.1.9/svg4everybody.min.js"
     },
     {
+      "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_08e2f53a-3e53-4e92-a2b5-5dd556f66673.png",
+      "PackagePath": "staticwebassets/ProductsMedia/jaspet_08e2f53a-3e53-4e92-a2b5-5dd556f66673.png"
+    },
+    {
       "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_4fe8bce7-5cdc-45d1-946f-7713d3c169d4.png",
       "PackagePath": "staticwebassets/ProductsMedia/jaspet_4fe8bce7-5cdc-45d1-946f-7713d3c169d4.png"
     },
@@ -9365,12 +9369,20 @@
       "PackagePath": "staticwebassets/ProductsMedia/jaspet_638ffc10-de87-4bb0-b147-01da1d847195.png"
     },
     {
+      "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_7dacbde4-db60-4c71-a63b-c1f94d5169d1.png",
+      "PackagePath": "staticwebassets/ProductsMedia/jaspet_7dacbde4-db60-4c71-a63b-c1f94d5169d1.png"
+    },
+    {
       "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_8ec2407d-15dc-45e7-b265-84a3b78b7b26.png",
       "PackagePath": "staticwebassets/ProductsMedia/jaspet_8ec2407d-15dc-45e7-b265-84a3b78b7b26.png"
     },
     {
       "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_b4b1d3ee-f2af-4eee-ac3c-2ea7c8f8d62d.png",
       "PackagePath": "staticwebassets/ProductsMedia/jaspet_b4b1d3ee-f2af-4eee-ac3c-2ea7c8f8d62d.png"
+    },
+    {
+      "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_bc60c6de-a239-4d66-9a0c-019044fc1cc0.png",
+      "PackagePath": "staticwebassets/ProductsMedia/jaspet_bc60c6de-a239-4d66-9a0c-019044fc1cc0.png"
     },
     {
       "Id": "/Users/salihcancakar/Desktop/Jaspet/Jaspet/JaspetWEBUI.WEBUI/wwwroot/ProductsMedia/jaspet_cad9a697-9c33-42fa-ada3-e522548811a7.png",

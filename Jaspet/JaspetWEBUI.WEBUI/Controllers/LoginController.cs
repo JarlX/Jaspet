@@ -46,7 +46,7 @@ public class LoginController : Controller
             return RedirectToAction("Index", "AdminHome");
         }
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "UserHome");
     }
     
 }

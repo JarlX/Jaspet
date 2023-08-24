@@ -69,6 +69,23 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
             };
             return View(productViewModel);
         }
+        
+        [HttpGet("/Admin/Product/{productGUID}")]
+        public async Task<IActionResult> GetProduct(Guid productGUID)
+        {
+            var url = $"{BaseUrl}/Product/" + productGUID;
+            var client = new RestClient(url);
+            var request = new RestRequest(url);
+            request.AddHeader("Content-Type", JsonContentType);
+            request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
+            RestResponse restResponse = await client.ExecuteAsync(request);
+
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<ProductDTO>>(restResponse.Content);
+
+            var product = responseObject.Data;
+
+            return Json(new { success = true, data = product });
+        }
 
 
         [HttpPost("/Admin/AddProduct")]

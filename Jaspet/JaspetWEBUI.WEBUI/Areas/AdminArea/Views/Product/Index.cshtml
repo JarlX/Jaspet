@@ -97,11 +97,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="fuProductFeaturedImage_Add">Öne Çıkan Görsel</label>
+                    <label for="fuProductFeaturedImage_Add">Görsel</label>
                     <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="fuProductFeaturedImage_Add">
-                            <label class="custom-file-label" for="fuProductFeaturedImage_Add">Choose file</label>
+                            <label class="custom-file-label" for="fuProductFeaturedImage_Add">Görsel Seç</label>
                         </div>
 
                     </div>
@@ -117,6 +117,64 @@
     <!-- /.modal-dialog -->
 </div>
 @* New Product MODAL *@
+
+@* Product Update Modal *@
+<div class="modal fade" id="modal-ProductDetail">
+    <div class="modal-dialog modal-ProductDetail">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Ürün Güncelle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="txtProductName_Update">Ürün Adı</label>
+                    <input type="text" class="form-control" id="txtProductName_Update">
+                </div>
+                <div class="form-group">
+                    <label for="txtProductUnitPrice_Update">Birim Fiyatı</label>
+                    <input type="text" class="form-control" id="txtProductUnitPrice_Update">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtProductDescription_Update">Ürün Açıklaması</label>
+                    <textarea class="form-control" rows="5" id="txtProductDescription_Update"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ddlProductCategory_Update">Kategorisi</label>
+                    <select class="custom-select rounded-0" id="ddlProductCategory_Update">
+
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Guid">@category.CategoryName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fuProductFeaturedImage_Update">Görsel</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="fuProductFeaturedImage_Update">
+                            <label class="custom-file-label" for="fuProductFeaturedImage_Update">Görsel Seç</label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="btnUpdateProduct">Kaydet</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@* Product Update Modal *@
 
 
 <script>
@@ -165,6 +223,26 @@ $(function (){
                 })
                 
                 setTimeout(()=>{window.location.reload()},3000)
+            }
+        }
+        })
+    })
+    
+    $(".btnProductDetail").click(function (){
+        let productGUID = $(this).attr("data-guid");
+        $.ajax({
+        url:"/Admin/Product/" + productGUID,
+        type: "GET",
+        success:(res)=>{
+            if (res.success){
+                $("#txtProductName_Update").val(res.data.name);
+                $("#txtProductUnitPrice_Update").val(res.data.unitPrice);
+                $("#txtProductDescription_Update").val(res.data.description);
+                
+                $('#btnUpdateProduct').attr('data-guid', productGUID)
+                
+                const select = document.querySelector('#ddlProductCategory_Update')
+                select.value = res.data.categoryGuid
             }
         }
         })

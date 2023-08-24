@@ -13,6 +13,10 @@
       <Folder Include="Areas\AdminArea\Views\AdminHome\" />
       <Folder Include="Areas\AdminArea\Views\Category\" />
       <Folder Include="Areas\AdminArea\Views\User\" />
+      <Folder Include="Areas\UserArea\Data\" />
+      <Folder Include="Areas\UserArea\Models\" />
+      <Folder Include="Areas\UserArea\Pages\" />
+      <Folder Include="Areas\UserArea\Views\Shared\" />
       <Folder Include="Views\Login\" />
       <Folder Include="wwwroot\AdminUI\" />
       <Folder Include="wwwroot\Home\" />
@@ -67,6 +71,7 @@
       <_ContentIncludedByDefault Remove="wwwroot\AdminUI\js\pages\dashboard.js" />
       <_ContentIncludedByDefault Remove="wwwroot\AdminUI\js\pages\dashboard2.js" />
       <_ContentIncludedByDefault Remove="wwwroot\AdminUI\js\pages\dashboard3.js" />
+      <_ContentIncludedByDefault Remove="Areas\UserArea\Pages\UserHome\Index.cshtml" />
     </ItemGroup>
 
 
