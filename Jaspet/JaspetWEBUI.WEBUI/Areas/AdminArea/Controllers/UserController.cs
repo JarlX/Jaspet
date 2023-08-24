@@ -67,5 +67,21 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
             var responseObject = JsonConvert.DeserializeObject<ApiResult<UserDTO>>(restResponse.Content);
             return Json(new { success = true, data = responseObject.Data });
         }
+        
+        [HttpPost("/Admin/RemoveUser/{UserGUID}")]
+        public async Task<IActionResult> RemoveCategory(Guid UserGUID)
+        {
+            var url = $"{BaseUrl}/RemoveUser/" + UserGUID;
+            var client = new RestClient(url);
+            var request = new RestRequest(url,Method.Delete);
+            request.AddHeader("Content-Type", JsonContentType);
+            request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
+            
+            RestResponse restResponse = await client.ExecuteAsync(request);
+
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<bool>>(restResponse.Content);
+
+            return Json(new { success = true });
+        }
     }
 }

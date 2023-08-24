@@ -243,6 +243,40 @@
         },
       });
     });
+    
+    $(".btnRemoveUser").click(function (){
+        
+        let userGUID = $(this).attr("data-guid");
+        
+        Swal.fire({
+            text:"Kullanıcıyı Silmek İstediğinize Emin Misini?",
+            icon:"warning",
+            showCancelButton: true,
+            confirmButtonColor: '#40ff00',
+            cancelButtonColor: '#ff0000',
+            confirmButtonText: 'Evet!',
+            cancelButtonText: 'Hayır',
+        }).then((res)=>{
+            if (res.isConfirmed){
+                $.ajax({
+                    url:"/Admin/RemoveUser/" + userGUID,
+                    type:"POST",
+                    success:(res)=>{
+                        if (res.success){
+                            Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Kullanıcı Başarıyla Silindi',
+                            showConfirmButton: false,
+                            timer: 3000
+                        })
+                        setTimeout(function () { window.location.reload() }, 3000);
+                        }
+                    }
+                })
+            }
+        } )
+    })
   });
 </script>
 

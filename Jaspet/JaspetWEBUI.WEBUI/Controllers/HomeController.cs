@@ -8,9 +8,17 @@ namespace JaspetWEBUI.Controllers;
 public class HomeController : Controller
 {
     
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public HomeController(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+
     [HttpGet("/")]
     public IActionResult Index()
     {
+        _httpContextAccessor.HttpContext.Session.Clear();
         return View();
     }
     
