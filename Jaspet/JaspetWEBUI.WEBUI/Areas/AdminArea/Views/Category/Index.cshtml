@@ -16,7 +16,7 @@
     </div>
     <div class="card-body">
 
-        <table id="tblKategoriler" class="table table-bordered table-striped">
+        <table id="tblCategories" class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th style="width: 10px"></th>
@@ -35,8 +35,8 @@
                         <td>@item.CategoryName</td>
                         <td>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-info" id="btnUpdateCategory"  data-toggle="modal">Güncelle</button>
-                                <button type="button" class="btn btn-danger" id="btnDeleteCategory">Sil</button>
+                                <button type="button" class="btn btn-warning btnCategoryDetail" data-guid="@item.Guid" data-target="#modal-updateCategory"  data-toggle="modal">Güncelle</button>
+                                <button type="button" class="btn btn-danger btnCategoryDelete" data-guid="@item.Guid" >Sil</button>
                             </div>
                         </td>
                     </tr>
@@ -47,7 +47,7 @@
     </div>
 </div>
 
-@* MODAL *@
+@* ADD MODAL *@
 <div class="modal fade" id="modal-newCategory">
     <div class="modal-dialog modal-newCategory">
         <div class="modal-content">
@@ -72,17 +72,45 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-@* MODAL *@
+@* ADD MODAL *@
+
+@* UPDATE MODAL *@
+
+<div class="modal fade" id="modal-updateCategory">
+    <div class="modal-dialog modal-updateCategory">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Kategori Güncelle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="update_inputCategoryName">Kategori Adı</label>
+                    <input type="text" class="form-control" id="update_inputCategoryName">
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="btnUpdateCategory">Kaydet</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@* UPDATE MODAL *@
 
 <script>
 $(()=>{
-    $("#tblKategoriler").DataTable({
+    $("#tblCategories").DataTable({
     "language":"tr",
     "responsive":true,
     "lengthChange":false,
     "autoWidth":false,
     "buttons":["copy","csv","excel","pdf","print","colvis"]
-    }).buttons().container().appendTo("#tblKategoriler_wrapper .col-md-6:eq(0)");
+    }).buttons().container().appendTo("#tblCategories_wrapper .col-md-6:eq(0)");
     
     $("#btnAddCategory").click(()=>{
         let categoryDto = {};
@@ -115,7 +143,86 @@ $(()=>{
         })
     });
     
+    $(".btnCategoryDetail").click(function (){
+        
+        $("#update_inputCategoryName").val(" ");
+        let categoryGUID = $(this).attr('data-guid');
+        
+        $.ajax({
+        url:"/Admin/Category/" + categoryGUID,
+        method:"GET",
+        success:(res) =>{
+            if (res.success) {
+            $('#btnUpdateCategory').attr('data-guid', categoryGUID)
+            $('#update_inputCategoryName').val(res.data.categoryName);
+            }
+        }
+        })    
+    });
     
-    $("#b")
+    
+    $("#btnUpdateCategory").click(function (){
+        
+        let categoryDto = {};
+        
+          categoryDto.CategoryName = $("#update_inputCategoryName").val();
+          categoryDto.Guid = $(this).attr('data-guid');
+          
+        $.ajax({
+        url:"/Admin/UpdateCategory",
+        method:"POST",
+        data:{ categoryDto },
+        success:(res)=>{
+            if (res.success){
+                Swal.fire({
+                position:"top-end",
+                icon:"success",
+                title:"Kategori Başarıyla Güncellendi",
+                showConfirmButton:false,
+                timer:3000
+                });
+                
+                setTimeout(()=>{window.location.reload()},3000);
+            }
+        }
+        })
+    });
+    
+    $(".btnCategoryDelete").click(function (){
+       
+       let categoryGUID = $(this).attr('data-guid');
+       
+        
+       Swal.fire({
+       text: "'Kategoriyi Silmek İstediğinizden Emin misiniz?",
+       icon: 'warning',
+       showCancelButton: true,
+       confirmButtonColor: '#74ff00',
+       cancelButtonColor: '#ff0000',
+       confirmButtonText: 'Evet!',
+       cancelButtonText: 'Hayır',
+        }).then((res) => {
+            if (res.isConfirmed){
+                $.ajax({
+                    url:"/Admin/RemoveCategory/" + categoryGUID,
+                    method:"POST",
+                    success:(res)=>{
+                        if (res.success){
+                            Swal.fire({
+                            position:"top-end",
+                            icon:"success",
+                            title:"Kategori Başarıyla Silindir",
+                            showConfirmButton:false,
+                            timer:3000
+                            });
+                            
+                            setTimeout(()=>{window.location.reload()},3000)
+                        }
+                    }
+                })
+            }
+        })
+        
+    });
 })
 </script>

@@ -4,8 +4,6 @@ using System.Text.Json.Serialization;
 
 public class UserDTOBase
 {
-    [JsonIgnore] public Guid Guid { get; set; }
-
     public string FirstName { get; set; }
 
     public string LastName { get; set; }

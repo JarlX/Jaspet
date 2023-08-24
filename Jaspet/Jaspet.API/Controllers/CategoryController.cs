@@ -63,7 +63,7 @@ public class CategoryController : Controller
 
         if (category != null)
         {
-            CategoryDTOResponse categoryDtoResponse = new CategoryDTOResponse();
+            CategoryDTOResponse categoryDtoResponse = _mapper.Map<CategoryDTOResponse>(category);
 
             return Ok(Final<CategoryDTOResponse>.OkWithData(categoryDtoResponse));
 

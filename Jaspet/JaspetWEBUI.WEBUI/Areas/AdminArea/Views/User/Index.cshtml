@@ -1,0 +1,248 @@
+@model List<JaspetWEBUI.Core.DTO.UserDTO>
+
+@{
+    ViewData["Title"] = "Kullanıcılar";
+    Layout = "_Layout";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Kullanıcılar</h3>
+        <div class="card-tools">
+            <button type="button" class="btn btn-block btn-info" data-toggle="modal" data-target="#modal-NewUser">Yeni Kullanıcı</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table id="tblUsers" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th style="width: 10px">#</th>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>E-Posta</th>
+                <th>Telefon</th>
+                <th>Adres</th>
+                <th style="width:20%"></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@(Model.IndexOf(user) + 1)</td>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>@user.Address</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info btnUserDetail" data-guid="@user.Guid" data-toggle="modal" data-target="#modal-UserDetail">Detay</button>
+                            <button type="button" class="btn btn-danger btnRemoveUser" data-guid="@user.Guid">Sil</button>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@* New User MODAL *@
+
+<div class="modal fade" id="modal-NewUser">
+<div class="modal-dialog modal-NewUser">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Yeni Kullanıcı</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="txtUserName_Add">İsim</label>
+                <input type="text" class="form-control" id="txtUserName_Add">
+            </div>
+            <div class="form-group">
+                <label for="txtUserLastName_Add">Soyisim</label>
+                <input type="text" class="form-control" id="txtUserLastName_Add">
+            </div>
+            <div class="form-group">
+                <label for="txtUserEmail_Add">E-Posta</label>
+                <input type="email" class="form-control" id="txtUserEmail_Add">
+            </div>
+                
+            <div class="form-group">
+                <label for="txtUserPhone_Add">Telefon Numarası</label>
+                <input type="tel" class="form-control" id="txtUserPhone_Add">
+            </div>
+                
+            <div class="form-group">
+                <label for="txtUserAddress_Add">Adres</label>
+                <textarea class="form-control" rows="5" id="txtUserAddress_Add"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ddlUserRole_Add">Rol</label>
+                <select class="custom-select rounded-0" id="ddlUserRole_Add"> 
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                </select>
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary" id="btnAddUser">Kaydet</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+</div>
+
+@* New User MODAL *@
+
+@* User Detail MODAL *@
+<div class="modal fade" id="modal-UserDetail">
+    <div class="modal-dialog modal-UserDetail">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Kullanıcı Detayları</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label for="divName" class="col-sm-2 col-form-label">Ad</label>
+                    <div class="col-sm-10 col-form-label" id="divName">
+                    </div>
+
+                    <label for="divSurname" class="col-sm-2 col-form-label">Soyad</label>
+                    <div class="col-sm-10 col-form-label" id="divSurname">
+                    </div>
+
+                    <label for="divEmail" class="col-sm-2 col-form-label">E-Posta</label>
+                    <div class="col-sm-10 col-form-label" id="divEmail">
+                    </div>   
+                    
+                    
+                    <label for="divPhone" class="col-sm-2 col-form-label">Telefon</label>
+                    <div class="col-sm-10 col-form-label" id="divPhone">
+                    </div>
+                    
+                    <label for="divAddress" class="col-sm-2 col-form-label">Adres</label>
+                    <div class="col-sm-10 col-form-label" id="divAddress">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+               
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+@* User Detail MODAL *@
+
+
+<script>
+  $(() => {
+    $('#tblUsers')
+      .DataTable({
+        language: 'tr',
+        responsive: true,
+        lengthChange: false,
+        autoWidth: false,
+        buttons: ['copy', 'csv', 'excel', 'pdf', 'print', 'colvis'],
+      })
+      .buttons()
+      .container()
+      .appendTo('#tblUsers_wrapper .col-md-6:eq(0)');
+
+    $('#btnAddUser').click(function () {
+      let user = {
+        FirstName: $('#txtUserName_Add').val(),
+        LastName: $('#txtUserLastName_Add').val(),
+        Email: $('#txtUserEmail_Add').val(),
+        PhoneNumber: $('#txtUserPhone_Add').val(),
+        Address: $('#txtUserAddress_Add').val(),
+        UserRole: $('#ddlUserRole_Add').val(),
+        Password: 12345,
+      };
+
+      function generateUsername(firstName, lastName) {
+        let firstInitial = firstName.charAt(0).toLowerCase();
+        let lastInitial = lastName.charAt(0).toLowerCase();
+        return firstInitial + lastInitial;
+      }
+
+      let formData = new FormData();
+      formData.append('FirstName', user.FirstName);
+      formData.append('LastName', user.LastName);
+      formData.append(
+        'UserName',
+        generateUsername(user.FirstName, user.LastName)
+      );
+      formData.append('Password', user.Password);
+      formData.append('Email', user.Email);
+      formData.append('PhoneNumber', user.PhoneNumber);
+      formData.append('Address', user.Address);
+      formData.append('UserRole', user.UserRole);
+
+      $.ajax({
+        url: '/Admin/AddUser',
+        method: 'POST',
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: (res) => {
+          if (res.success) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Kullanıcı Başarıyla Eklendi',
+              showConfirmButton: false,
+              timer: 3000,
+            });
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 3000);
+          }
+        },
+      });
+    });
+
+    $('.btnUserDetail').click(function () {
+      let userGUID = $(this).attr('data-guid');
+
+      $.ajax({
+        url: '/Admin/User/' + userGUID,
+        type: 'get',
+        success: function (res) {
+          if (res.success) {
+            $('#divName').html('').append(res.data.firstName);
+            $('#divSurname').html('').append(res.data.lastName);
+            $('#divEmail').html('').append(res.data.email);
+            $('#divPhone').html('').append(res.data.phoneNumber);
+            $('#divAddress').html('').append(res.data.address);
+          }
+        },
+        error: function (err) {
+          console.log(err);
+        },
+      });
+    });
+  });
+</script>
+

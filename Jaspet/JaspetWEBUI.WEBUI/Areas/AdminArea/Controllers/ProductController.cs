@@ -19,20 +19,20 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
         private const string JsonContentType = "application/json";
         
         [HttpGet("/Admin/Products")]
-        public async Task<IActionResult> Index()
+        public async Task Index()
         {
-            var url = $"{BaseUrl}/Categories";
+            var url = $"{BaseUrl}/Products";
             var client = new RestClient(url);
             var request = new RestRequest(url);
             request.AddHeader("Content-Type", JsonContentType);
             request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
             RestResponse restResponse = await client.ExecuteAsync(request);
 
-            var responseObject = JsonConvert.DeserializeObject<ApiResult<List<CategoryDTO>>>(restResponse.Content);
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<List<ProductDTO>>>(restResponse.Content);
 
-            var categories = responseObject.Data;
+            var products = responseObject.Data;
+
             
-            return View(categories);
         }
     }
 }

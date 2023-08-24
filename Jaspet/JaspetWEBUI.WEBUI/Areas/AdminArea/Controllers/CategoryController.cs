@@ -34,6 +34,24 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
             
             return View(categories);
         }
+        
+        [HttpGet("/Admin/Category/{categoryGUID}")]
+        public async Task<IActionResult>GetCategory(Guid categoryGUID)
+        {
+            var url = $"{BaseUrl}/Category/" + categoryGUID;
+            var client = new RestClient(url);
+            var request = new RestRequest(url);
+            request.AddHeader("Content-Type", JsonContentType);
+            request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
+            RestResponse restResponse = await client.ExecuteAsync(request);
+
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<CategoryDTO>>(restResponse.Content);
+            
+            
+            return Json(new { success = true, data = responseObject.Data });
+            
+           
+        }
 
         [HttpPost("/Admin/AddCategory")]
         public async Task<IActionResult> AddCategory(CategoryDTO categoryDto)
@@ -50,6 +68,39 @@ namespace JaspetWEBUI.WEBUI.Areas.AdminArea.Controllers
             var responseObject = JsonConvert.DeserializeObject<ApiResult<CategoryDTO>>(restResponse.Content);
 
             return Json(new { success = true, data = responseObject.Data });
+        }
+        
+        [HttpPut("/Admin/UpdateCategory")]
+        public async Task<IActionResult> UpdateCategory(CategoryDTO categoryDto)
+        {
+            var url = $"{BaseUrl}/UpdateCategory";
+            var client = new RestClient(url);
+            var request = new RestRequest(url,Method.Put);
+            request.AddHeader("Content-Type", JsonContentType);
+            request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
+            var body = JsonConvert.SerializeObject(categoryDto);
+            request.AddBody(body, JsonContentType);
+            RestResponse restResponse = await client.ExecuteAsync(request);
+            
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<CategoryDTO>>(restResponse.Content);
+
+            return Json(new { success = true, data = responseObject.Data });
+        }
+
+        [HttpPost("/Admin/RemoveCategory/{categoryGUID}")]
+        public async Task<IActionResult> RemoveCategory(Guid categoryGUID)
+        {
+            var url = $"{BaseUrl}/RemoveCategory/" + categoryGUID;
+            var client = new RestClient(url);
+            var request = new RestRequest(url,Method.Delete);
+            request.AddHeader("Content-Type", JsonContentType);
+            request.AddHeader("Authorization", "Bearer " + SessionManager.LoggedUser.Token);
+            
+            RestResponse restResponse = await client.ExecuteAsync(request);
+
+            var responseObject = JsonConvert.DeserializeObject<ApiResult<bool>>(restResponse.Content);
+
+            return Json(new { success = true });
         }
     }
 }

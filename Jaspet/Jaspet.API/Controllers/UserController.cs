@@ -37,17 +37,15 @@ public class UserController : Controller
     [ProducesResponseType(typeof(Final<UserDTOResponse>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> AddUser(UserDTORequest userDtoRequest)
     {
-        var user = _mapper.Map<User>(userDtoRequest);
+        User user = _mapper.Map<User>(userDtoRequest);
 
         var hashedPwd = HashPassword(userDtoRequest.Password);
         user.Password = hashedPwd;
-        user.PhoneNumber = "000000";
-        user.Address = "Türkiye";
         await _userService.AddAsync(user);
 
 
         var userDtoResponse = _mapper.Map<UserDTOResponse>(user);
-        return Ok(userDtoResponse);
+        return Ok(Final<UserDTOResponse>.OkWithData(userDtoResponse));
     }
 
     [HttpGet("/User/{guid:guid}")]

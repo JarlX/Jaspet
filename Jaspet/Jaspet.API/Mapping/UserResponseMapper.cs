@@ -16,6 +16,6 @@ public class UserResponseMapper : Profile
             .ForMember(dest => dest.PhoneNumber, opt => { opt.MapFrom(src => src.PhoneNumber); })
             .ForMember(dest => dest.Email, opt => { opt.MapFrom(src => src.Email); })
             .ForMember(dest => dest.Address, opt => { opt.MapFrom(src => src.Address); })
-            .ForMember(dest => dest.Address, opt => { opt.MapFrom(src => src.Address); }).ReverseMap();
+            .ForMember(dest => dest.Guid, opt => { opt.MapFrom(src => src.Guid); }).ReverseMap();
     }
 }
